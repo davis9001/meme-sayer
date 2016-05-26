@@ -9,7 +9,7 @@
     <script>
       var annyangScript = document.createElement('script');
       if (/localhost/.exec(window.location)) {
-        annyangScript.src = "//localhost:8000/bower_components/annyang/annyang.js"
+        annyangScript.src = "//localhost:9001/bower_components/annyang/annyang.js"
       } else {
         annyangScript.src = "//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"
       }
@@ -31,6 +31,12 @@
         $("p#message").text("Fuck you David");
       }
 
+      var gangplank = function() {
+        $('p#message').text("What is Gangplank?");
+        $('body').append('<iframe width="420" height="315" src="https://www.youtube.com/v/rAaWvVFERVA?version=3&start=102&end=142&autoplay=1&amp;hl=en_US&amp;rel=0" frameborder="0" allowfullscreen></iframe>');
+        window.open('https://www.youtube.com/v/rAaWvVFERVA?version=3&start=162&end=165&autoplay=1&amp;hl=en_US&amp;rel=0', '_memewindow');
+      }
+
 
 
       // define our commands.
@@ -39,7 +45,8 @@
       //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
       var commands = {
         'hello computer':        hello,
-        'hello bitch':          helloFucker
+        'hello bitch':          helloFucker,
+        'what is this place':   gangplank
       };
 
       // OPTIONAL: activate debug mode for detailed logging in the console

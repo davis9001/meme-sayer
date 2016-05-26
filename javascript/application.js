@@ -1,7 +1,5 @@
 var commands = {
-  'Push it': pushIt,
-  'Fuck': fuckCommand,
-  'Stack Overflow': stackOverflow
+  'What Is This Place': gangplank
 };
 
 var fuckCommand = function() {
@@ -16,6 +14,10 @@ var pushIt = function() {
 
 var stackOverflow = function() {
   $('p#message').text('I am crazy!');
+}
+
+var gangplank = function() {
+  $('p#message').text('What is Gangplank?')
 }
 
 // if (annyang) {
