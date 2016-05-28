@@ -16,53 +16,7 @@
       document.write(annyangScript.outerHTML)
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-    "use strict";
-
-    // first we make sure annyang started succesfully
-    if (annyang) {
-
-      // define the functions our commands will run.
-      var hello = function() {
-        $("p#message").text("Hello David");
-      }
-
-      var helloFucker = function() {
-        $("p#message").text("Fuck you David");
-      }
-
-      var gangplank = function() {
-        $('p#message').text("What is Gangplank?");
-        $('body').append('<iframe width="420" height="315" src="https://www.youtube.com/v/rAaWvVFERVA?version=3&start=102&end=142&autoplay=1&amp;hl=en_US&amp;rel=0" frameborder="0" allowfullscreen></iframe>');
-        window.open('https://www.youtube.com/v/rAaWvVFERVA?version=3&start=162&end=165&autoplay=1&amp;hl=en_US&amp;rel=0', '_memewindow');
-      }
-
-
-
-      // define our commands.
-      // * The key is the phrase you want your users to say.
-      // * The value is the action to do.
-      //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
-      var commands = {
-        'hello computer':        hello,
-        'hello bitch':          helloFucker,
-        'what is this place':   gangplank
-      };
-
-      // OPTIONAL: activate debug mode for detailed logging in the console
-      annyang.debug();
-
-      // Add voice commands to respond to
-      annyang.addCommands(commands);
-
-      // OPTIONAL: Set a language for speech recognition (defaults to English)
-      // For a full list of language codes, see the documentation:
-      // https://github.com/TalAter/annyang/blob/master/docs/README.md#languages
-      annyang.setLanguage('en');
-
-      // Start listening. You can call this here, or attach this call to an event, button, etc.
-      annyang.start();
-    }
+    <script src="/javascript/application.js">
     </script>
 </head>
 <body>
